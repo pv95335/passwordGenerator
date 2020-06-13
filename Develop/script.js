@@ -1,28 +1,48 @@
 // Assignment code here
-var generatePassword= function() {
-  window.alert("Alright let's generate a new password for you.");
-}
+var generatePassword = function() {
+  //if (generatePassword == null || generatePassword =="") {
+    //window.alert("Goodbye");
+  //} else {
+ criteria()
+  }
+//}
 
 var generateBtn = document.querySelector("#generate");
 
-function writePassword(lower, upper, number, symbol, length) {
+function writePassword() {
   
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
-  const inputArray = [{lower}, {upper}, {number}, {symbol}];
-  (item => Object.values(item)[0]);
 
-  console.log('inputArray', inputArray);
 }
 
 generateBtn.addEventListener("click", writePassword);
 
 
+
 //Generating
 function criteria() {
+  var passwordLength = window.prompt("How long do you want it? Type a number between 8 - 128.")
+    switch (passwordLength) {
 
+    }
+     window.confirm("Do you want lower case letters?")
+      if (confirm(lowerLetter()));
+    
+
+    window.confirm("Do you want uppper case letters?")
+      if (confirm(upperLetter()));
+    
+
+    window.confirm("Do you want numbers?")
+      if (confirm(numberRandom()));
+
+
+    window.confirm("Do you want symbols?")
+      if (confirm(symbolRandom()));
+    
 }
 
 function lowerLetter(){
@@ -49,6 +69,16 @@ function lowerLetter(){
     number: numberRandom,
     symbol: symbolRandom
   };
+
+const resultEl = document.getElementById('resultEl');
+const lengthEl = document.getElementById('lengthEl');
+const upperCaseEl = document.getElementById('upperCaseEl');
+const lowerCaseEl = document.getElementById('lowerCaseEl');
+const numbersEl = document.getElementById('numbersEl');
+const symbolsEl = document.getElementById('symbolsEl');
+const generateEl = document.getElementById('generateEl');
+
+
 
 //STARTING CODE FOR ASSIGNMENT
 // Get references to the #generate element
